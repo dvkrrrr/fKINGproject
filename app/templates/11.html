@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<div lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Заказ цветов онлайн </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script>
+function click_1(sender) {
+        var x = document.getElementById("first_div");
+        var y = document.getElementById("second_div");
+        if (sender == 'btn1') {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            y.style.display = "block";
+            x.style.display = "none";
+        }
+}
+</script>
+
+
+<script>
+    function buy(sender) {
+    var example = document.getElementById('example1'),
+             ctx     = example.getContext('2d'),
+             pic     = new Image();
+        if (sender == '1.jpg') {
+            pic.src = 'https://arenaflowers.ru/image/cache/catalog/Cveti/monobuket/barhatistij-zvon/barhatistij-zvon-320x320.jpg';
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0);
+            }
+        } else if (sender == '2.jpg') {
+            pic.src = 'http://picdom.ru/i/400/9/b/df5f4c69e.jpg';
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '3.jpg') {
+            pic.src = 'https://i.pinimg.com/originals/a3/74/15/a37415c3585354c4f0f2ffed2dd07fde.jpg'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '4.jpg') {
+            pic.src = 'https://mobile.interflora.fr/medias/RU2003RURU-06027-300Wx300H.jpg?context=bWFzdGVyfGZvcmVpZ25NZWRpYXwxMTM5NDh8aW1hZ2UvanBlZ3xmb3JlaWduTWVkaWEvaGY4L2g4MS85MjA4MzAyODk1MTM0LmpwZ3w4NTU3ZGRlMDI5OWYxMjI1YjQ4ZDQ1YjRjNmQ2N2UxMzFiNDU4YTdlNWRhMjFkMzVkMTc5OTljMGE3MWRmNjRl'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '5.jpg') {
+            pic.src = 'https://sunrose.com.ua/productsImgs/img1267_main_l.jpg'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '6.jpg') {
+            pic.src = 'http://flower-market.kiev.ua/image/cache/data/mono/19/2-666x666.jpg'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '7.jpg') {
+            pic.src = 'https://cdn.fleur.hk/media/cache/f9/f9/f9f9f9e45fb630b2a628c6fea459378a.jpg'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+        } else if (sender == '8.jpg') {
+            pic.src = 'https://violaflo.ru/files/products/6L8A9241.900x1000w.jpg?5a30c8225f539b5c79faa353ce562808'
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 320, 320);
+            }
+       }
+
+}
+</script>
+
+
+
+
+</head>
+
+<div>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <h2 id="finishes">Готовые букеты</h2>
+
+    <div id="ready">
+        <div id="type_bouquet">
+            <div id="bouquet">
+                <div id="eight"></div>
+                <button onclick="buy('8.jpg')">Buy</button>
+            </div>
+
+            <div id="bouquet1">
+                <p>картинка букетика</p>
+
+                <button onclick="buy('7.jpg')">Buy</button>
+
+            </div>
+
+            <div id="bouquet2">
+                <p>картинка букетика</p>
+                <button onclick="buy('6.jpg')">Buy</button>
+                <div></div>
+            </div>
+
+            <div id="bouquet3">
+                <p>картинка букетика</p>
+                <button onclick="buy('5.jpg')">Buy</button>
+                <div></div>
+            </div>
+        </div>
+
+        <div id="type_bouquet1">
+            <div id="bouquet4">
+                <p>картинка букетика</p>
+                <button onclick="buy('4.jpg')">Buy</button>
+                <div></div>
+            </div>
+
+            <div id="bouquet5">
+                <p>картинка букетика</p>
+                <button onclick="buy('3.jpg')">Buy</button>
+                <div></div>
+            </div>
+
+            <div id="bouquet6">
+                <p>картинка букетика</p>
+                <button onclick="buy('2.jpg')">Buy</button>
+            </div>
+
+            <div id="bouquet7">
+                <p>картинка букетика</p>
+                <button onclick="buy('1.jpg')">Buy</button>
+                <div id="center"></div>
+            </div>
+        </div>
+
+    </div>
+    <button class="knopka" onclick="myFunction()">Развернуть / свернуть</button>
+
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("ready");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+}
+</script>
+
+
+    <h2 id="starts">
+        Составить свой букет
+    </h2>
+
+    <div id="not_ready">
+        <button class="btn1" onclick="click_1('btn1')">кнопочка на переход к цветочкам</button>
+        <button class="btn2" onclick="click_1('btn2')">кнопочка на переход к травушке</button>
+
+        <div class=first_div" id="first_div">
+            <div class="slider">
+                <div class="slider__wrapper">
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_flower1">
+                            {% for j in '1234'%}
+                                <div id="flower1">
+                                <p>картинка цветочка1</p>
+                                <button>+</button>
+                                <button>-</button>
+                                <p>price</p>
+                                </div>
+                            {%endfor%}
+                         </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_flower2">
+                            {% for j in '1234'%}
+                                <div id="flower2">
+                                    <p>картинка цветочка2</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_flower3">
+                            {% for j in '1234'%}
+                                <div id="flower3">
+                                    <p>картинка цветочка3</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_flower4">
+                            {% for j in '1234'%}
+                                <div id="flower4">
+                                    <p>картинка цветочка4</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_flower5">
+                            {% for j in '1234'%}
+                                <div id="flower5">
+                                    <p>картинка цветочка5</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+            </div>
+                <a class="slider__control slider__control_left" href="#" role="button"></a>
+                <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+                </div>
+            </div>
+        </div>
+        <div class="second_div" id="second_div" display="none">
+            <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grass1">
+                            {% for j in '1234'%}
+                                <div id="grass1">
+                                <p>картинка травушки</p>
+                                <button>+</button>
+                                <button>-</button>
+                                <p>price</p>
+                                </div>
+                            {%endfor%}
+                         </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grass2">
+                            {% for j in '1234'%}
+                                <div id="grass2">
+                                    <p>картинка травушки</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grass3">
+                            {% for j in '1234'%}
+                                <div id="grass3">
+                                    <p>картинка травушки</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grass4">
+                            {% for j in '1234'%}
+                                <div id="grass4">
+                                    <p>картинка травушки</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grassr5">
+                            {% for j in '1234'%}
+                                <div id="grass5">
+                                    <p>картинка травушки</p>
+                                    <button>+</button>
+                                    <button>-</button>
+                                    <p>price</p>
+                                </div>
+                            {%endfor%}
+                        </div>
+                    {%endfor%}
+                </div>
+            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+        </div>
+            </div>
+        </div>
+        </div>
+
+        <canvas id='example'>Обновите браузер</canvas>
+		<script>
+			var example = document.getElementById("example"),
+			    ctx     = example.getContext('2d');
+			ctx.fillStyle = '#F0FFFF';
+			ctx.fillRect(0, 0, 320, 480);
+		</script>
+    </div>
+
+    <script>
+    'use strict';
+    var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          if (e.target.classList.contains('slider__control')) {
+            e.preventDefault();
+            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            _transformItem(direction);
+          }
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+
+    var slider = multiItemSlider('.slider')
+
+  </script>
+
+    <h2>Оформление заказа</h2>
+        <div>
+            <canvas height="320" width="320" id='example1'></canvas>
+
+        </div>
+        <p>PRICE</p>
+        <p>phone number</p>
+        <p> вставка номера телефона</p>
+        <p>Как к ам можно обращаться?</p>
+        <p>вставка фио</p>
+        <p>Адрес доставки</p>
+        <p>вставляется адрес</p>
+        <button>OKAY, BOOMER</button>
+    </div>
+
+
+
+
+
+
+    <footer>
+        <p>
+            lorem
+        </p>
+    </footer>
+
+</body>
+</html>

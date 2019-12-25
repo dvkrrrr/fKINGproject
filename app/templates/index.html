@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<div lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title> Заказ цветов онлайн </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script>
+function click_1(sender) {
+        var x = document.getElementById("first_div");
+        var y = document.getElementById("second_div");
+        if (sender == 'btn1') {
+            x.style.display = "block";
+            y.style.display = "none";
+        } else {
+            y.style.display = "block";
+            x.style.display = "none";
+        }
+}
+</script>
+
+<script>
+	function plus(sender){
+	    var example = document.getElementById("example"),
+	    ctx     = example.getContext('2d');
+	    pic     = new Image();
+	    if (sender == 1){
+	        pic.src = "{{ url_for("static", filename="flower/розакрасная1.jpg")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 2){
+	        pic.src = "{{ url_for("static", filename="flower/розаперсик1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 3){
+	        pic.src = "{{ url_for("static", filename="flower/розарозовая1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 4){
+	        pic.src = "{{ url_for("static", filename="flower/розабелая1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 5){
+	        pic.src = "{{ url_for("static", filename="flower/тюльпанрозовый1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 6){
+	        pic.src = "{{ url_for("static", filename="flower/тюльпанкрасный1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 7){
+	        pic.src = "{{ url_for("static", filename="flower/тюльпанбелый1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 8){
+	        pic.src = "{{ url_for("static", filename="flower/тюльпанжелтый1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 9){
+	        pic.src = "{{ url_for("static", filename="flower/хризантемабелая1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    } else if (sender == 10){
+	        pic.src = "{{ url_for("static", filename="flower/хризантемарозовая1.png")}}";
+            pic.onload = function () {
+                ctx.drawImage(pic, 0, 0, 50, 50); }
+	    }
+	}
+</script>
+
+<script>
+    function buy(sender) {
+    var example = document.getElementById('example1'),
+             ctx     = example.getContext('2d'),
+             pic     = new Image();
+        if (sender == '1.png') {
+            pic.src = "{{ url_for("static", filename="images/1.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '2.png') {
+            pic.src = "{{ url_for("static", filename="images/2.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '3.png') {
+            pic.src = "{{ url_for("static", filename="images/3.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '4.png') {
+            pic.src = "{{ url_for("static", filename="images/4.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '5.png') {
+            pic.src = "{{ url_for("static", filename="images/5.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '6.png') {
+            pic.src = "{{ url_for("static", filename="images/6.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '7.png') {
+            pic.src = "{{ url_for("static", filename="images/7.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+        } else if (sender == '8.png') {
+            pic.src = "{{ url_for("static", filename="images/8.jpg")}}";
+            pic.onload = function () {
+                    ctx.drawImage(pic, 0, 0, 300, 300);
+            }
+       }
+
+}
+</script>
+
+
+
+</head>
+
+<div>
+
+    <header>
+        <h1></h1>
+    </header>
+
+    <h2 id="finishes">Готовые букеты</h2>
+
+    <div id="ready">
+        {% for i in range(count)%}
+
+
+            <div id="bouquet">
+                <img height="170" width="170" src="{{ url_for("static", filename="images/"+name[i][1]) }}" alt="ops image">
+                <button class="first" onclick="buy('{{name[i][1]}}')">Купить</button>
+                <p>цена: {{name[i][2]}}</p>
+            </div>
+        {% endfor %}
+
+
+        </div>
+
+    </div>
+    <button class="knopka" onclick="myFunction()">Развернуть / свернуть</button>
+
+
+    <script>
+    function myFunction() {
+        var x = document.getElementById("ready");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+}
+</script>
+
+
+    <h2 id="starts">
+        Составить свой букет
+    </h2>
+
+    <div id="not_ready">
+        <button class="btn1" onclick="click_1('btn1')">кнопочка на переход к цветочкам</button>
+        <button class="btn2" onclick="click_1('btn2')">кнопочка на переход к травушке</button>
+
+        <div class=first_div" id="first_div">
+            <div class="slider">
+                <div class="slider__wrapper">
+                    {% for i in range(2) %}
+                    <div class="slider__item">
+                            {% for j in range(count1 // 2)%}
+                                <div id="flower1">
+                                <img height="100" width="100" src="{{ url_for("static", filename="flower/"+name1[count1 // 2 * i + j][2]) }}" alt="ops image">
+                                <p>{{name1[count1 // 2 * i + j][1]}}, цена: {{name1[count1 // 2 * i + j][4]}}</p>
+                                <button onclick="plus('{{name1[count1 // 2 * i + j][0]}}')">+</button>
+                                <button onclick="minus('{{name1[count1 // 2 * i + j][0]}}')">-</button>
+                                </div>
+
+
+                            {% endfor %}
+                    </div>
+                    {% endfor %}
+                </div>
+                <a class="slider__control slider__control_left" href="#" role="button"></a>
+                <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+            </div>
+        </div>
+        <div class="second_div" id="second_div">
+            <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    {% for i in '12345'%}
+                        <div id="type_grass1">
+                            {% for j in '1234'%}
+                                <div id="grass1">
+                                <p>картинка травушки</p>
+                                <button>+</button>
+                                <button>-</button>
+                                <p>price {{K}}</p>
+                                </div>
+                            {%endfor%}
+                         </div>
+                    {%endfor%}
+                </div>
+                <a class="slider__control slider__control_left" href="#" role="button"></a>
+                <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+        </div>
+            </div>
+        </div>
+
+        <canvas id='example'>Обновите браузер</canvas>
+
+    </div>
+
+    <script>
+    'use strict';
+    var multiItemSlider = (function () {
+      return function (selector, config) {
+        var
+          _mainElement = document.querySelector(selector), // основный элемент блока
+          _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+          _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+          _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
+          _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
+          _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
+          _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
+          _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
+          _positionLeftItem = 0, // позиция левого активного элемента
+          _transform = 0, // значение транфсофрмации .slider_wrapper
+          _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
+          _items = []; // массив элементов
+        // наполнение массива _items
+        _sliderItems.forEach(function (item, index) {
+          _items.push({ item: item, position: index, transform: 0 });
+        });
+
+        var position = {
+          getMin: 0,
+          getMax: _items.length - 1,
+        }
+
+        var _transformItem = function (direction) {
+          if (direction === 'right') {
+            if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) >= position.getMax) {
+              return;
+            }
+            if (!_sliderControlLeft.classList.contains('slider__control_show')) {
+              _sliderControlLeft.classList.add('slider__control_show');
+            }
+            if (_sliderControlRight.classList.contains('slider__control_show') && (_positionLeftItem + _wrapperWidth / _itemWidth) >= position.getMax) {
+              _sliderControlRight.classList.remove('slider__control_show');
+            }
+            _positionLeftItem++;
+            _transform -= _step;
+          }
+          if (direction === 'left') {
+            if (_positionLeftItem <= position.getMin) {
+              return;
+            }
+            if (!_sliderControlRight.classList.contains('slider__control_show')) {
+              _sliderControlRight.classList.add('slider__control_show');
+            }
+            if (_sliderControlLeft.classList.contains('slider__control_show') && _positionLeftItem - 1 <= position.getMin) {
+              _sliderControlLeft.classList.remove('slider__control_show');
+            }
+            _positionLeftItem--;
+            _transform += _step;
+          }
+          _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+        }
+
+        // обработчик события click для кнопок "назад" и "вперед"
+        var _controlClick = function (e) {
+          if (e.target.classList.contains('slider__control')) {
+            e.preventDefault();
+            var direction = e.target.classList.contains('slider__control_right') ? 'right' : 'left';
+            _transformItem(direction);
+          }
+        };
+
+        var _setUpListeners = function () {
+          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          _sliderControls.forEach(function (item) {
+            item.addEventListener('click', _controlClick);
+          });
+        }
+
+        // инициализация
+        _setUpListeners();
+
+        return {
+          right: function () { // метод right
+            _transformItem('right');
+          },
+          left: function () { // метод left
+            _transformItem('left');
+          }
+        }
+
+      }
+    }());
+
+    var slider = multiItemSlider('.slider')
+
+  </script>
+
+    <h2>Оформление заказа</h2>
+        <div>
+            <canvas height="320" width="320" id='example1'></canvas>
+
+    </div>
+        <p>Цена: {{1500}}</p>
+        <form name="form1" method="post" action="send.php">
+        <input type="text" name="fio" placeholder="Как к вам можно обращаться?" required>
+        <input type="text" name="phone" placeholder="Укажите свой номер телефона" required>
+        <input type="text" name="email" placeholder="Укажите вашу почту" required>
+        <input type="datetime-local" name="date" placeholder="Укажите дату и время доставки" required>
+        <input type="text" name="address" placeholder="Укажите адрес доставки" required>
+        <input type="submit" value="Okay, BOOMER">
+        </form>
+    </div>
+
+
+    <footer>
+        <p>
+            lorem
+        </p>
+    </footer>
+
+</body>
+</html>
