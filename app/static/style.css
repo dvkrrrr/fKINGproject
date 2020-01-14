@@ -1,0 +1,292 @@
+body{
+  background: LavenderBlush;
+  font-family: Tahoma, serif;
+}
+
+header{
+  display: block;
+  background: #FFC0CB;
+  height: 150px;
+  width: 100%;
+  background: url('fon.png') no-repeat top center;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 50 px;
+  font-family: 'Caveat', cursive;
+
+}
+
+#ready{
+  margin: auto;
+  right: -500px;
+  text-align: center;
+  width: 1300px;
+  left: 50%;
+  padding: 15px;
+  border: 3px solid white;
+  background: #fffafc;
+}
+
+#type_bouquet, #type_bouquet1{
+  margin: auto;
+  padding: 5px;
+}
+
+#bouquet, #bouquet1, #bouquet2, #bouquet3, #bouquet4, #bouquet5, #bouquet6, #bouquet7{
+  width: 200px;
+  height: 200 px;
+  margin: 5px;
+  color: pink;
+  display: inline-block;
+  padding: 5px;
+  border: 3px solid white;
+  background: LavenderBlush;
+}
+
+#not_ready{
+  margin: left;
+  padding: 15px;
+  border: 3px solid white;
+  background: #fffafc;
+
+  width: 75%;
+}
+
+#type_flower1, #type_flower2, #type_flower3, #type_flower4, #type_flower5, type_grass1, #type_grass2, #type_grass3, #type_grass4, #type_grass5, type_beauty1, #type_beauty2, #type_beauty3, #type_beauty4, #type_beauty5{
+  margin: auto;
+  padding: 15px;
+  font-size: 30 px;
+}
+#second_div{
+  display: none;
+  background: #fffafc;
+}
+
+#flower1, #flower2, #grass1, #grass2{
+  color: pink;
+  display: inline-block;
+  padding: 40px;
+  border: 3px solid white;
+  background: LavenderBlush;
+  color: pink;
+  font-size: 30 px;
+}
+
+
+#finishes, #starts{
+  margin: auto;
+  width: 300px;
+  height: 500 px;
+  color: white;
+  background: linear-gradient(to right, #00FF7F, #AFEEEE);
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+}
+
+.slider {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider__wrapper {
+      display: flex;
+      transition: transform 0.6s ease;
+    }
+
+    .slider__item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: auto;
+    }
+
+    .slider__control {
+      position: absolute;
+      top: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      color: #fff;
+      text-align: center;
+      opacity: 0.5;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, .5);
+    }
+
+    .slider__control_show {
+      background: linear-gradient(to right, #00FF7F, #AFEEEE);
+      display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: 0;
+      opacity: .9;
+    }
+
+    .slider__control_left {
+      left: 0;
+    }
+
+    .slider__control_right {
+      right: 0;
+    }
+
+    .slider__control::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: transparent no-repeat center center;
+      background-size: 100% 100%;
+    }
+
+    .slider__control_left::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_right::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+
+    .slider__item>div {
+      line-height: 25px;
+      font-size: 10px;
+      text-align: center;
+      margin: auto;
+    }
+.knopka{
+  background: linear-gradient(to right, #00FF7F, #AFEEEE);
+  color: white;
+  width: 200px;
+  height: 40px;
+}
+#example1{
+    height: 320 px;
+    width: 320 px;
+}
+button{
+  background: linear-gradient(to right, #00FF7F, #AFEEEE);
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.flower1{
+  margin-top: 10px;
+  width: 170px;
+  height: 250px;
+  color: pink;
+  display: inline-block;
+  border: 3px solid white;
+  background: LavenderBlush;
+  color: pink;
+  font-size: 15 px;
+}
+.beauty{
+  margin: 10 px 15 px 10 px 15 px;
+  width: 200px;
+  height: 250px;
+  color: pink;
+  border: 3px solid white;
+  background: LavenderBlush;
+  display: inline-block;
+  font-size: 15 px;
+}
+.run{
+  margin: auto;
+}
+#prikrep{
+margin-top: 350px;
+position: absolute;
+margin-left: 1230px;
+right:20;
+
+  background: #fffafc;
+}
+#cover{
+  margin-top:350px;
+}
+.gg{
+  margin: 30px;
+  margin-top:-350px;
+  width: 300px;
+  height: 50px;
+}
+#price{
+  margin-top:-200px;
+  margin-left:400px;
+}
+#example1{
+position: absolute;
+  left:400px;
+  top:2000px;
+}
+
+#rab{
+font-size: 150%;
+  margin-left:400px;
+}
+#graab{
+  margin-left:75px;
+}
+.qwe{
+  font-size: 15px;
+}
+.text{
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  font-size: 25px;
+}
+.text1{
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+.kaif{
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+}
+.pricee{
+font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+.first{
+font-family: 'Caveat', cursive;
+  font-size: 20px;
+}
+.beauty{
+  margin-top: 10px;
+  width: 170px;
+  height: 250px;
+  color: pink;
+  display: inline-block;
+  border: 3px solid white;
+  background: LavenderBlush;
+  color: pink;
+  font-size: 15 px;
+}
+#graab{
+margin: auto;
+  width: 300px;
+  height: 500 px;
+  color: white;
+  background: linear-gradient(to right, #00FF7F, #AFEEEE);
+  font-family: 'Caveat', cursive;
+  font-size: 40px;
+}
+#qwer{
+background: linear-gradient(to right, #00FF7F, #AFEEEE);
+  color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+    width: 200 px;
+    height: 50px;
+}
