@@ -2,10 +2,11 @@
 <html>
 <div lang="ru">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Caveat|Marck+Script|Pacifico&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title> Заказ цветов онлайн </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<script>
+    <script>
 function click_1(sender) {
         var x = document.getElementById("first_div");
         var y = document.getElementById("second_div");
@@ -43,49 +44,49 @@ function click_1(sender) {
                     ctx.drawImage(pic, 0, 0, 300, 300);
 
             }
-            document.getElementById("rab").innerHTML = {{name[0][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[0][2]}}+ ' ' + 'рублей'
         } else if (sender == '2.png') {
             pic.src = "{{ url_for("static", filename="images/2.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[1][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[1][2]}}+ ' ' + 'рублей'
         } else if (sender == '3.png') {
             pic.src = "{{ url_for("static", filename="images/3.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[2][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[2][2]}}+ ' ' + 'рублей'
         } else if (sender == '4.png') {
             pic.src = "{{ url_for("static", filename="images/4.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[3][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[3][2]}}+ ' ' + 'рублей'
         } else if (sender == '5.png') {
             pic.src = "{{ url_for("static", filename="images/5.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[4][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[4][2]}}+ ' ' + 'рублей'
         } else if (sender == '6.png') {
             pic.src = "{{ url_for("static", filename="images/6.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[5][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[5][2]}}+ ' ' + 'рублей'
         } else if (sender == '7.png') {
             pic.src = "{{ url_for("static", filename="images/7.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = {{name[6][2]}}
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[6][2]}}+ ' ' + 'рублей'
         } else if (sender == '8.png') {
             pic.src = "{{ url_for("static", filename="images/8.jpg")}}";
             pic.onload = function () {
                     ctx.drawImage(pic, 0, 0, 300, 300);
             }
-            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[7][2]}} + ' ' + 'р'
+            document.getElementById("rab").innerHTML = 'Цена:' + ' ' + {{name[7][2]}} + ' ' + 'рублей'
        }
 
 }
@@ -517,12 +518,12 @@ function plus(sender){
              pic.onload = function () {
                  ctx.drawImage(pic, x, y, 25, 25); }
 
-             if (flowers.has('орхидеябелая.png') == true){
-                 stroka = flowers.get('орхидеябелая.png') + ' ' +  (x + ' ' + y + ' ' + count);
-                 flowers.set('орхидеябелая.png', stroka);
+             if (flowers.has('орхидеябелая') == true){
+                 stroka = flowers.get('орхидеябелая') + ' ' +  (x + ' ' + y + ' ' + count);
+                 flowers.set('орхидеябелая', stroka);
              } else {
                  stroka = x + ' ' + y + ' ' + count
-                 flowers.set('орхидеябелая.png', stroka);
+                 flowers.set('орхидеябелая', stroka);
               }
               cena = cena + 350
         }else if (sender == 26){
@@ -530,12 +531,12 @@ function plus(sender){
              pic.onload = function () {
                  ctx.drawImage(pic, x, y, 25, 25); }
 
-             if (flowers.has('орхидеярозовая.png') == true){
-                 stroka = flowers.get('орхидеярозовая.png') + ' ' +  (x + ' ' + y + ' ' + count);
-                 flowers.set('орхидеярозовая.png', stroka);
+             if (flowers.has('орхидеярозовая') == true){
+                 stroka = flowers.get('орхидеярозовая') + ' ' +  (x + ' ' + y + ' ' + count);
+                 flowers.set('орхидеярозовая', stroka);
              } else {
                  stroka = x + ' ' + y + ' ' + count
-                 flowers.set('орхидеярозовая.png', stroka);
+                 flowers.set('орхидеярозовая', stroka);
               }
               cena = cena + 350
         }else if (sender == 27){
@@ -543,12 +544,12 @@ function plus(sender){
              pic.onload = function () {
                  ctx.drawImage(pic, x, y, 25, 25); }
 
-             if (flowers.has('орхидеямалиновая.png') == true){
-                 stroka = flowers.get('орхидеямалиновая.png') + ' ' +  (x + ' ' + y + ' ' + count);
-                 flowers.set('орхидеямалиновая.png', stroka);
+             if (flowers.has('орхидеямалиновая') == true){
+                 stroka = flowers.get('орхидеямалиновая') + ' ' +  (x + ' ' + y + ' ' + count);
+                 flowers.set('орхидеямалиновая', stroka);
              } else {
                  stroka = x + ' ' + y + ' ' + count
-                 flowers.set('орхидеямалиновая.png', stroka);
+                 flowers.set('орхидеямалиновая', stroka);
               }
               cena = cena + 350
         }else if (sender == 28){
@@ -918,13 +919,13 @@ function minus(sender){
             cena = cena - 135
         }
     }else if (sender == 17){
-        if (flowers.has('альстремериябелая') == true){
-            strr = flowers.get('альстремериябелая').split(' ')
+        if (flowers.has('aльстрeмериябелая') == true){
+            strr = flowers.get('aльстрeмериябелая').split(' ')
             countt = strr[strr.length - 1]
             y = strr[strr.length - 2]
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
-            flowers.set('альстремериябелая', stroka)
+            flowers.set('aльстрeмериябелая', stroka)
             pic.src = "{{ url_for("static", filename="flower/удаление/удалениеальстремериябелая.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
@@ -953,7 +954,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионбелый', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -967,7 +968,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионрозовый', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -981,7 +982,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионярко-розовый', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -995,7 +996,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионкрасный', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -1009,7 +1010,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионжелтый', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -1023,7 +1024,7 @@ function minus(sender){
             x = strr[strr.length - 3]
             stroka = (strr.slice(0, strr.length - 3)).join(' ')
             flowers.set('пионсиний', stroka)
-            pic.src = "{{ url_for("static", filename="flower/удаление/удалениепион.png")}}";
+            pic.src = "{{ url_for("static", filename="flower/удаление/удаление пион.png")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, x, y, 25, 25); }
             udol.push(countt)
@@ -1202,6 +1203,7 @@ function minus(sender){
 }
 
 function clin(){
+
 window.cena;
 window.count;
 count = 0;
@@ -1213,8 +1215,116 @@ cena = cena - cena
        pic.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
                     pic.onload = function () {
                         ctx.drawImage(pic, 0, 0, 250, 250); }
-  document.getElementById("proverka").innerHTML = cena + ''
+  document.getElementById("proverka").innerHTML = cena + ' ' + 'рублей'
 
+}
+function plus2(sender){
+window.cena;
+  var example = document.getElementById("example"),
+       ctx     = example.getContext('2d');
+       picture     = new Image();
+       nach = new Image();
+        if (sender == 7){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/7.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,120, 170, 200); }
+        }else if (sender == 8){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/8.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,130, 170, 200); }
+        }else if (sender == 9){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/9.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,135, 170, 200); }
+        }else if (sender == 10){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/10.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,130, 170, 200); }
+        }else if (sender == 11){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/11.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,135, 170, 170); }
+        }else if (sender == 12){
+                nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+               picture.src = "{{ url_for("static", filename="flower/украшения/12.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 35,130, 170, 200); }
+        }else if (sender == 1){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/1.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30,135, 170, 200); }
+        }else if (sender == 2){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/2.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30,145, 170, 200); }
+        }else if (sender == 3){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 145, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/3.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30,145, 170, 200); }
+        }else if (sender == 4){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 145, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/4.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30,145, 170, 200); }
+        }else if (sender == 5){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 145, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/5.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30, 135, 170, 200); }
+        }else if (sender == 6){
+        nach.src = "{{ url_for("static", filename="flower/удаление/ree.jpg")}}";
+                    nach.onload = function () {
+                        ctx.drawImage(nach, 35, 140, 250, 200); }
+
+            picture.src = "{{ url_for("static", filename="flower/украшения/6.png")}}";
+                    picture.onload = function () {
+                        ctx.drawImage(picture, 30,130, 170, 250); }
+        }
+}
+
+function gat(){
+    document.getElementById("rab").innerHTML = 'Цена:' + ' '  + document.getElementById("proverka").innerHTML + ', ' + 'Собственноручно собраннй букет.'
 }
 </script>
 
@@ -1268,11 +1378,12 @@ cena = cena - cena
     <div id="prikrep">
         <canvas id='example' height = 250px width = 250px>Обновите браузер</canvas>
         <button onclick="clin()">удалить все</button>
-        <p id="proverka">WtyfL|:</p>
+        <p id="proverka">Цена:</p>
+        <button onclick="gat()">Купить</button>
         <dialog>
-            <p1>Справка по цветовым сочетаниям</p1>
+            <p1 class="text"><b>Справка по цветовым сочетаниям</b></p1>
             <div>
-                <p>Ниже представлены цветовые схемы и возможные цветовые сочетения, для удобства справа расположен большой цветовой круг</p>>
+                <p class="text">Ниже представлены цветовые схемы и возможные цветовые сочетения, для удобства ниже расположен большой цветовой круг</p>
                 <img height="100" width="100" src="{{ url_for("static", filename="flower/справка/first.png") }}" alt="ops image">
                 <img height="100" width="100" src="{{ url_for("static", filename="flower/справка/second.png") }}" alt="ops image">
                 <img height="100" width="100" src="{{ url_for("static", filename="flower/справка/third.png") }}" alt="ops image">
@@ -1283,11 +1394,17 @@ cena = cena - cena
             <div>
                 <img height="150" width="150" src="{{ url_for("static", filename="flower/справка/big.png") }}" alt="ops image">
             </div>
-            <p>по выше представленным схемам можно бебебеббебебебеббебебебе</p>
-            <p>Справка по сочетаниям цветов в букетах</p>
+            <p class="text">по выше представленным схемам можно подобрать правильную цвнтовую гамму для ваших композиций.</p>
+            <p class="text"><b>Справка по сочетаниям цветов в букетах</b></p>
+            <p class="text"> С <b>розами</b> лучше сочетаются альстремерия, гипсофила, гиперикум, хризантема.<br>
+                С <b>хризантемами</b> стоит сочетать альстремерию, герберу, розы, гипсофилу.<br>
+                <b>Альстремерия</b> сочетается с розами, хризантемами, эвкалиптом, пионами, гипсофилой, рускусом.<br>
+                <b>Пионы</b> сочетаются с альстремериями, розами, гипсофилой, фисташкой, папоротником.<br>
+                <b>Орхидеи</b>, же, нужно рекомендованно сочетать с гипсофилой, рускусом, папоротником, фисташкой.
+            </p>
             <button id="close">Закрыть</button>
         </dialog>
-        <button id="show">Открыть всплывающее окно!</button>
+        <button id="show">Открыть справку</button>
     </div>
 </div>
     <div id="not_ready">
@@ -1302,7 +1419,7 @@ cena = cena - cena
                             {% for j in range(count1 // 2)%}
                                 <div class="flower1">
                                 <img height="100" width="100" src="{{ url_for("static", filename="flower/"+name1[count1 // 2 * i + j][2]) }}" alt="ops image">
-                                <p>{{name1[count1 // 2 * i + j][1]}}, цена: {{name1[count1 // 2 * i + j][3]}}</p>
+                                <p class="text1">{{name1[count1 // 2 * i + j][1]}}, цена: {{name1[count1 // 2 * i + j][3]}}</p>
                                 <button onclick="plus('{{name1[count1 // 2 * i + j][0]}}')">+</button>
                                 <button onclick="minus('{{name1[count1 // 2 * i + j][0]}}')">-</button>
                                 </div>
@@ -1324,8 +1441,7 @@ cena = cena - cena
                                 <img height="100" width="100" src="{{ url_for("static", filename="flower/украшения/"+name2[count2 // 2 * i + j][3]) }}" alt="ops image">
                                 <p>{{name2[count2 // 2 * i + j][1]}}, цена: {{name2[count2 // 2 * i + j][2]}}</p>
                                  <div class="run">
-                                <button>+</button>
-                                <button>-</button>
+                                <button onclick="plus2('{{name2[count2 // 2 * i + j][0]}}')">Выбрать</button>
                                 </div>
                                 </div>
                     {%endfor%}
@@ -1338,9 +1454,6 @@ cena = cena - cena
 
 
         </div>
-
-
-        <p id="parent">0</p>
 
 
 <script type = text/javascript>
@@ -1449,27 +1562,25 @@ document.querySelector('#close').onclick = function() {
 
   </script>
 
-    <h2 id="graab">Оформление заказа</h2>
+    <h2 id="graab" class="kaif">Оформление заказа</h2>
 
             <canvas height="320" width="320" id='example1'></canvas>
-            <p id="rab">Цена:</p>
+            <p id="rab" class="kaif">Цена:</p>
 
 
-    <div id="cover">
+    <div id="cover" class="kaif">
         <form name="form1" method="post" action="send.php" class="gg">
         <input type="text" class="gg" name="fio"  placeholder="Как к вам можно обращаться?" required>
         <input type="text" class="gg" name="phone" placeholder="Укажите свой номер телефона" required>
         <input type="text" class="gg" name="email" placeholder="Укажите вашу почту" required>
         <input type="datetime-local" class="gg" name="date" placeholder="Укажите дату и время доставки" required>
         <input type="text" class="gg" name="address" placeholder="Укажите адрес доставки" required>
-        <input type="submit" class="gg" value="Okay, BOOMER">
+            <button id="qwer">Заказать</button>
         </form>
     </div>
 
     <footer>
-        <p>
-
-        </p>
+        <p></p>
     </footer>
 </body>
 </html>
